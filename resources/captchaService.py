@@ -8,7 +8,7 @@ import os
 
 class getCaptcha(Resource):
 
-    def get(self):
+    def post(self):
         try:
             json_data = request.get_json()
             if(json_data == None):
