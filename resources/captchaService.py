@@ -9,7 +9,7 @@ import os
 class getCaptcha(Resource):
 
     def get(self):
-        # try:
+        try:
             json_data = request.get_json()
             if(json_data == None):
                 return jsonify({"error": "params not found"})
@@ -24,5 +24,5 @@ class getCaptcha(Resource):
             if(exists("resources/temp.jpg") == True):
                 os.remove("resources/temp.jpg")
             return jsonify({"captcha": captcha})
-        # except:
-        #     print('An exception occurred')
+        except:
+            print('An exception occurred')
