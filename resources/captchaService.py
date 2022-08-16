@@ -15,8 +15,7 @@ class getCaptcha(Resource):
                 return jsonify({"error": "params not found"})
 
             base64Image = json_data['image']
-            pw = json_data['temp']
-            if(base64Image == None or pw == None):
+            if(base64Image == None):
                 return jsonify({"error": "params not found"})
             with open("resources/temp.jpg", "wb") as fh:
                 fh.write(base64.b64decode(base64Image))
