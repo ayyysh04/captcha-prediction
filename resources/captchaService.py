@@ -22,7 +22,6 @@ class getCaptcha(Resource):
                 fh.write(base64.b64decode(base64Image))
             captcha = solve_captcha()
             if(exists("resources/temp.jpg") == True):
-                print("yess")
                 os.remove("resources/temp.jpg")
             return jsonify({"captcha": captcha})
         except:

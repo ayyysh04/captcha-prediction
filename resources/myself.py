@@ -1,6 +1,6 @@
-from flask import jsonify, request
+from flask import jsonify
 from flask_restful import Resource
-
+import tensorflow as tf
 
 class authorInfo(Resource):
 

@@ -1,8 +1,8 @@
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 from resources.helpers import resize_to_fit
 import numpy as np
 import imutils
-import cv2
+import cv2 
 import pickle
 MODEL_FILENAME = "resources/captcha_model.hdf5"
 MODEL_LABELS_FILENAME = "resources/model_labels.dat"
