@@ -1,4 +1,4 @@
-from genericpath import exists
+from genericpath import exists  
 from flask import jsonify, request
 from flask_restful import Resource
 from resources.solve_captchas import solve_captcha
